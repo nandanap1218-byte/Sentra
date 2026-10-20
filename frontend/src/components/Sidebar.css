@@ -1,0 +1,253 @@
+
+/* =========================================================
+   SENTRA SIDEBAR
+========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 250px;
+  min-width: 250px;
+  height: 100vh;
+
+  background: #0e1421;
+  color: #e7edf6;
+
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Brand */
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  height: 72px;
+  min-height: 72px;
+  padding: 0 8px;
+
+  border: none;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+
+  border-radius: 9px;
+  background: #0d817c;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sidebar-brand h2 {
+  margin: 0;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* Navigation */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  padding: 8px 14px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 44px;
+  padding: 0 9px;
+
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  color: #c6d0df;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.sidebar-link:hover {
+  background: #172331;
+  color: #ffffff;
+}
+
+.sidebar-link.active {
+  background: #14343b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.sidebar-icon svg {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Bottom profile section */
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 0;
+  flex-shrink: 0;
+
+  border-top: 1px solid #26303e;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  min-height: 67px;
+  padding: 12px 3px;
+  margin: 0 14px;
+
+  box-sizing: border-box;
+}
+
+.sidebar-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #27cbbb;
+  color: #062b31;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sidebar-profile-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+
+  min-width: 0;
+}
+
+.sidebar-profile-info strong {
+  overflow: hidden;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-profile-info span {
+  color: #91a0b7;
+  font-size: 12px;
+}
+
+/* Logout icon button */
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 32px;
+  padding: 4px;
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #9aa7ba;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #25303e;
+  color: #ffffff;
+}
+
+.logout-button svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .sidebar-nav {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .sidebar-profile {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}

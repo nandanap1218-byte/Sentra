@@ -1,0 +1,69 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node.js / React / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python / Django
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local database
+db.sqlite3
+db.sqlite3-journal
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python virtual environment
+backend/venv/
+backend/.venv/
+
+# Python / Django
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local database
+*.sqlite3
+*.sqlite3-journal
+
+# Dependencies and build files
+node_modules/
+dist/

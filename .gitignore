@@ -1,0 +1,41 @@
+﻿# Logs
+logs/
+*.log
+
+# Node.js / React / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python / Django
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases
+*.sqlite3
+*.sqlite3-journal
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

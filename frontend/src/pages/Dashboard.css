@@ -1,0 +1,458 @@
+
+/* Dashboard page layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f8fb;
+}
+
+.sentra-dashboard {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 36px;
+  background: #f6f8fb;
+  color: #182230;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.sentra-dashboard *,
+.sentra-dashboard *::before,
+.sentra-dashboard *::after {
+  box-sizing: border-box;
+}
+
+/* Heading */
+.dashboard-page-header {
+  margin-bottom: 26px;
+}
+
+.dashboard-page-header h1 {
+  margin: 0 0 7px;
+  color: #182230;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+}
+
+.dashboard-page-header p {
+  margin: 0;
+  color: #7b8493;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Summary cards */
+.dashboard-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.sentra-dashboard .dashboard-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  min-width: 0;
+  min-height: 112px;
+  padding: 20px;
+  border: 1px solid #e6eaf0;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(20, 35, 60, 0.025);
+}
+
+.dashboard-card-label {
+  color: #778292;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sentra-dashboard .dashboard-card strong {
+  color: #182230;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Recent activity panel */
+.dashboard-activity {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e6eaf0;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(20, 35, 60, 0.025);
+}
+
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 59px;
+  padding: 17px 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.dashboard-section-header h2 {
+  margin: 0;
+  color: #182230;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.dashboard-text-link {
+  color: #147d78;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dashboard-text-link:hover {
+  color: #106963;
+  text-decoration: underline;
+}
+
+/* Compact activity rows: no column headings */
+.compact-activity-list {
+  width: 100%;
+}
+
+.compact-activity-row {
+  display: grid;
+  grid-template-columns: 145px 118px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-height: 59px;
+  padding: 13px 20px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.compact-activity-row:last-child {
+  border-bottom: none;
+}
+
+.compact-activity-row:hover {
+  background: #fafcfd;
+}
+
+.compact-activity-date {
+  color: #858e9c;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.compact-activity-action {
+  display: inline-block;
+  justify-self: start;
+  max-width: 100%;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.compact-activity-detail {
+  min-width: 0;
+  color: #465160;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Action badge colours */
+.activity-user {
+  color: #2563eb;
+  background: #eaf2ff;
+}
+
+.activity-role {
+  color: #7c3aed;
+  background: #f1eaff;
+}
+
+.activity-auth {
+  color: #047857;
+  background: #dff7eb;
+}
+
+.activity-permission {
+  color: #b45309;
+  background: #fff0d6;
+}
+
+.activity-default {
+  color: #475569;
+  background: #edf1f5;
+}
+
+/* Empty state and errors */
+.dashboard-activity-empty {
+  margin: 0;
+  padding: 25px 20px;
+  color: #858e9c;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dashboard-error {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #f1cccc;
+  border-radius: 7px;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 12px;
+}
+
+.dashboard-message {
+  padding: 20px 0;
+  color: #778292;
+  font-size: 13px;
+}
+
+/* Responsive layout */
+@media (max-width: 1050px) {
+  .sentra-dashboard {
+    padding: 26px 24px;
+  }
+
+  .dashboard-summary {
+    gap: 12px;
+  }
+
+  .sentra-dashboard .dashboard-card {
+    padding: 17px;
+  }
+
+  .compact-activity-row {
+    grid-template-columns: 130px 110px minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .compact-activity-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 8px;
+    padding: 14px 18px;
+  }
+
+  .compact-activity-date {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .sentra-dashboard {
+    padding: 22px 16px;
+  }
+
+  .dashboard-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-section-header {
+    padding: 15px;
+  }
+}
+/* Base style for Recent Activity badges */
+.compact-activity-action {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* Authentication: auth.login and auth.logout */
+.activity-auth {
+  color: #4f68ff !important;
+  background-color: #eef0ff !important;
+}
+
+/* Role activities: role.create, role.update, role.delete */
+.activity-role {
+  color: #8245c7 !important;
+  background-color: #f4ecfb !important;
+}
+
+/* User creation */
+.activity-user-create {
+  color: #16815f !important;
+  background-color: #e7f7ef !important;
+}
+
+/* User updates */
+.activity-user-update {
+  color: #b7791f !important;
+  background-color: #fff4df !important;
+}
+
+/* User deletion */
+.activity-user-delete {
+  color: #d64545 !important;
+  background-color: #fdecec !important;
+}
+
+/* Other user activities */
+.activity-user {
+  color: #087e8b !important;
+  background-color: #e5f6f7 !important;
+}
+
+/* Permission activities */
+.activity-permission {
+  color: #5365c9 !important;
+  background-color: #edf0ff !important;
+}
+
+/* Unclassified activities */
+.activity-default {
+  color: #64748b !important;
+  background-color: #f1f5f9 !important;
+}
+
+
+/* Recent Activity: compact height and clear column alignment */
+.dashboard-activity-expanded {
+  max-height: 340px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.dashboard-activity-expanded .dashboard-section-header {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.expanded-activity-list {
+  min-height: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.expanded-activity-row {
+  display: grid;
+  grid-template-columns: 145px minmax(150px, 210px) minmax(0, 1fr);
+  align-items: start;
+  column-gap: 16px;
+  padding: 10px 14px;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.expanded-activity-row .compact-activity-date {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.expanded-activity-row .compact-activity-action {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+.expanded-activity-row .compact-activity-detail {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-height: 1.45;
+}
+
+/* Keep the activity section compact on smaller screens */
+@media (max-width: 900px) {
+  .expanded-activity-row {
+    grid-template-columns: 125px minmax(120px, 170px) minmax(0, 1fr);
+    column-gap: 10px;
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-activity-expanded {
+    max-height: 380px;
+  }
+
+  .expanded-activity-list {
+    max-height: 300px;
+  }
+
+  .expanded-activity-row {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+
+  .expanded-activity-row .compact-activity-date {
+    white-space: normal;
+  }
+}
+
+
+/* Remove the Recent Activity side scrollbar */
+.expanded-activity-list {
+  max-height: none;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+/* Make View audit log larger and easier to read */
+.dashboard-activity-expanded .dashboard-text-link {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Keep the link aligned properly with the section heading */
+.dashboard-activity-expanded .dashboard-section-header {
+  align-items: center;
+}
+
+/* Force-remove the Recent Activity scrollbar */
+.sentra-dashboard .dashboard-activity-expanded .expanded-activity-list {
+  max-height: none !important;
+  height: auto !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.sentra-dashboard .dashboard-activity-expanded .expanded-activity-list::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+
+/* Small space below the Recent Activity box */
+.sentra-dashboard .dashboard-activity-expanded {
+  margin-bottom: 16px;
+}
